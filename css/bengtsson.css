@@ -1,0 +1,113 @@
+html {
+    font-family: helvetica, sans-serif;
+    font-size: 18px;
+}
+
+h1 {
+    font-family: georgia, serif;
+    font-size: 2rem;
+    color: #fff;
+    margin: 0;
+    padding: 0.75em 0.25em;
+    background: #2c2c2c;
+    line-height: 1.1em;
+}
+
+h4 {
+    font-family: georgia, serif;
+    font-size: 2.5rem;
+    color: red;
+}
+
+footer {
+    margin-left: 1px;
+    padding-left: 1rem;
+    font-size: small;
+}
+
+article {
+    background-color: antiquewhite;
+    margin-left: 1rem;
+    padding-left: 1rem;
+}
+
+ul {
+    padding: 1;
+}
+
+li {
+    list-style-type: none;
+    font-weight: bold;
+    font-size: 4rem;
+    position: relative;
+}
+
+li:focus {
+    border: 10px solid blue;
+}
+
+a:visited {
+    border: 10px solid red;
+}
+
+img:hover {
+    transform:rotate(-5deg);
+    /*transform: scale(.80);*/
+}
+
+span {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+ul {
+    /* autoprefixer: off */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: 200px;
+    grid-auto-flow: dense;
+    grid-gap: 1em;
+    margin: 2em;
+}
+
+li.highlight-box {
+    background-color: peachpuff;
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+li.highlight-tall {
+    background-color: aliceblue;
+    grid-row: span 2;
+}
+
+li.highlight-wide {
+    background-color: lightgoldenrodyellow;
+    grid-column: span 2;
+}
+
+img {
+    display: block;
+    -o-object-fit: cover;
+    object-fit: contain;
+    height: 98%;
+    border: 1px solid black;
+    -webkit-box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.tab { margin-left: 40px; }
+
+.warning {
+    color: red;
+    font-size: 200%;
+}
+
+@supports (display: grid) {
+    .warning {
+        display: none;
+    }
+}
